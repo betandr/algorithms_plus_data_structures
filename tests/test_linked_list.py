@@ -8,6 +8,11 @@ class TestLinkedList(unittest.TestCase):
     def setUp(self):
         self._linked_list = LinkedList()
 
+    def test_is_empty(self):
+        assert(self._linked_list.is_empty())
+        self._linked_list.add_head(Node(1))
+        self.assertFalse(self._linked_list.is_empty())
+
     def test_empty_linked_list(self):
         empty = self._linked_list.linked_list_as_string()
         assert(self._linked_list._counter == 0)

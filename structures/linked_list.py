@@ -28,6 +28,12 @@ class LinkedList:
     def enumerator(self):
         return Enumerator(self)
 
+    def is_empty(self):
+        if (self._counter < 1):
+            return True
+        else:
+            return False
+
     def linked_list_as_string(self):
         """
         Renders a linked list as a string.
