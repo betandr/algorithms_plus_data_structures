@@ -1,6 +1,6 @@
 import unittest
 
-from structures.hashing import AdditiveHash, FoldingHash, AdditiveHashTable
+from structures.hash_table import AdditiveHash, FoldingHash, AdditiveHashTable
 
 class TestHashing(unittest.TestCase):
 

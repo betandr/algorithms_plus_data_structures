@@ -6,13 +6,13 @@ A collection of algorithms and data structures implemented in Python.
 
 - [Node Chain](structures/node_chain.py)
 - [Linked List](structures/linked_list.py)
-- Doubly Linked List
-- Stack
-- Queue
-- Binary Tree
-- Hash Table
+- [Stack](structures/stack,py)
+- [Queue](structures/queue.py)
+- [Binary Tree](structures/binary_tree.py)
+- [Hash Table](structures/hash_table.py)
+
 
 ## Run Tests
 ```
-py.test
+pytest
 ```
