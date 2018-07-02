@@ -1,5 +1,7 @@
 # Notes
 
+# Structures
+
 ## Linked List
 ```
 add_head(item)
@@ -151,3 +153,59 @@ if (fill_factor >= max_fill_factor):
     for (item in array):
         hash item to new array
 ```
+
+# Algorithms
+
+## Sorting
+Sorted items are comparably smaller to left of collection and larger to the right.
+
+### Techniques
+- _Linear sorting_ - a single, large operation
+- _Divide and conquer_ - partition into separately-sortable sets
+
+### Performance
+Reducing either or both can help performance:
+- _Comparators_ - greater than/equal to/less than.
+- _Swaps_ - two values in the collection are transposed
+
+Overall performance then is dependent on the individual performance of each
+comparison or swap and can be expressed as _best_, _worst_, and _average_ performance.
+
+### Bubble Sort (Linear)
+_Run through array swapping adjacent items until no more swaps needed._
+- Worst case: `O(n^2)` - Not appropriate for large, unsorted collections.
+- Average case: `O(n^2)` - Not appropriate for large, unsorted collections.
+- Best case: `O(n)` - Efficient to sort small or nearly sorted collections.
+- Space required: `O(n)` - In-place transpositions.
+
+### Insertion Sort (Linear)
+_Single pass through an array inserting current item into place in the sorted
+part of the array. Everything to the left is sorted, to the right
+is unsorted._
+- Worst case: `O(n^2)` - Not appropriate for large, unsorted collections.
+- Average case: `O(n^2)` - Not appropriate for large, unsorted collections.
+- Best case: `O(n)` - Efficient to sort small or nearly sorted collections.
+- Space required: `O(n)` - In-place transpositions.
+
+### Selection Sort (Linear)
+_Find next smallest item and swap it to the first unsorted position._
+- Worst case: `O(n^2)` - Not appropriate for large, unsorted collections.
+- Average case: `O(n^2)` - Not appropriate for large, unsorted collections but
+typically better than bubble or insertion sort.
+- Best case: `O(n^2)` - Fewer swaps but many more comparisons.
+- Space required: `O(n)` - In-place transpositions.
+
+### Merge Sort (Divide and conquer)
+_Recursively split array into two arrays until each only has item; all are
+considered sorted. Recombine together and sort each smaller item._
+- Worst case: `O(n log n)` - Appropriate for large collections. Split collections can be parallelized.
+- Average case: `O(n log n)` - Appropriate for large collections.
+- Best case: `O(n log n)` - Appropriate for large collections. Cost is fixed, does work regardless
+- Space required: `O(n)` - Assuming merge sort is implemented in-place. Extra allocations would increase memory footprint.
+
+### Quick Sort (Divide and conquer)
+_Pick a pivot point and partition the array; move all lower values to the left. Re-pivot._
+- Worst case: `O(n^2)` - Absolute worst case is inversely sorted.
+- Average case: `O(n log n)` - Appropriate for large collections.
+- Best case: `O(n log n)` - Appropriate for large collections.
+- Space required: `O(n)` - In-place transpositions. Consider recursive stack requirements.
