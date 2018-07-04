@@ -126,4 +126,4 @@ if __name__ == "__main__":
     start = int(round(time.time() * 1000))
     sorted = quicksort(unsorted_quick)
     end = int(round(time.time() * 1000))
-    print("quick sorted in {} milliseconds".format(end - start))
+    print("quicksort sorted in {} milliseconds".format(end - start))

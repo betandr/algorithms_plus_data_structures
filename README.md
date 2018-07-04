@@ -2,7 +2,8 @@
 
 _"Algorithms + Data Structures = Programs"_ - Niklaus Wirth
 
-A collection of _VERY NAIVE_ algorithms and data structures implemented in Python.
+A collection of _VERY NAIVE AND NOT PRODUCTION_ algorithms and data structures
+implemented in Python.
 
 ## Structures
 
@@ -30,7 +31,7 @@ bubble sorted in 276 milliseconds
 insertion sorted in 71 milliseconds
 selection sorted in 66 milliseconds
 merge sorted in 5 milliseconds
-quick sorted in 2 milliseconds
+quicksort sorted in 2 milliseconds
 ```
 
 ## Tests

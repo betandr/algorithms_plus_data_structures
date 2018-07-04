@@ -154,6 +154,44 @@ if (fill_factor >= max_fill_factor):
         hash item to new array
 ```
 
+## Set
+Has methods:
+- `add(item) # Adds item if not already present`
+- `add_range(items)`
+- `count() # AKA Cardinality`
+- `contains(item)`
+- `union(set)`
+- `intersection(set)`
+- `difference(set)`
+- `symmetric_difference(set)`
+
+### Union
+Returns a set that contains all of the unique items in two other sets.
+```
+{1, 2, 3} ∪ {3, 4, 5} = {1, 2, 3, 4, 5}
+```
+
+### Intersection
+Returns a set that contains all of the intersecting members of two other sets.
+```
+{1, 2, 3} ∩ {3, 4, 5} = {3}
+```
+
+### Difference
+Returns a set that contains members of one set that are not members of a second set.
+```
+{1, 2, 3} ∖ {3, 4, 5} = {1, 2}
+```
+
+### Symmetric Difference
+Returns a set that contains members of two sets that are not in the other set.
+```
+{1, 2, 3} △ {3, 4, 5} = {1, 2, 4, 5}
+```
+
+
+
+
 # Algorithms
 
 ## Sorting
