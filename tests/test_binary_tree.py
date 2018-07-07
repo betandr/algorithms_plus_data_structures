@@ -1,19 +1,19 @@
 import unittest
 
-from structures.binary_tree import Node, BinaryTree
+from structures.binary_tree import BinaryTreeNode, BinaryTree
 
 class TestBinaryTree(unittest.TestCase):
     def setUp(self):
         self._binary_tree = BinaryTree()
 
     def test_node_returns_value(self):
-        node = Node(1)
+        node = BinaryTreeNode(1)
         assert(node.value == 1)
 
     def test_node_children_have_correct_values(self):
-        root = Node(1)
-        left_child = Node(2)
-        right_child = Node(3)
+        root = BinaryTreeNode(1)
+        left_child = BinaryTreeNode(2)
+        right_child = BinaryTreeNode(3)
 
         root.left = left_child
         root.right = right_child
@@ -21,10 +21,10 @@ class TestBinaryTree(unittest.TestCase):
         assert(root.left.value == 2)
         assert(root.right.value == 3)
 
-    def test_smaller_than(self):
-        smaller_node = Node(2)
-        greater_node = Node(3)
-        assert(smaller_node.is_smaller_than(greater_node))
+    def test_greater_than(self):
+        lesser_node = BinaryTreeNode(2)
+        greater_node = BinaryTreeNode(3)
+        assert(greater_node.is_greater_than(lesser_node))
 
     def test_add_to_empty_tree_adds_node_to_root(self):
         self._binary_tree.add(1)

@@ -13,6 +13,7 @@ implemented in Python.
 - [Queue](structures/queue.py)
 - [Binary Tree](structures/binary_tree.py)
 - [Hash Table](structures/hash_table.py)
+- [AVL Tree](structures/avl_tree.py)
 
 ## Algorithms
 

@@ -189,7 +189,110 @@ Returns a set that contains members of two sets that are not in the other set.
 {1, 2, 3} △ {3, 4, 5} = {1, 2, 4, 5}
 ```
 
+## AVL Trees
+Self-balancing binary tree invented by Adelson-Velsky and Landis (1962)
+- Follows all constraints of binary tree
+- Search and enumeration identical to binary trees
+- Insertion and deletion differ only in running the balance algorithm
 
+AVL trees:
+- Self-balancing
+- Height
+- Balance Factor
+- Right/Left heavy
+
+### Unbalanced tree
+Left height: 0
+Right height: 3
+```
+(1)
+  \
+  (2)
+    \
+    (3)
+      \
+      (4)
+```
+Finding `4` has O(n) performance as linked-list. Example could be loading dictionary in
+alphabetical order would produce unbalanced tree.
+
+### Balanced tree
+Left height: 2
+Right height: 1
+```
+       (3)
+      /   \
+    (2)    (4)
+   /
+(1)
+```
+Finding `4` has O(log n) performance as tree.
+
+Balancing algorithm: _Height of left and right tree can differ by maximum of 1_
+
+### Insertion
+1. Added as binary tree; lesser added to left, greater or equal to the right
+2. Balancing algorithm runs for every parent node.
+
+### Deletion
+1. The node to delete is found
+2. Child nodes are removed as in binary tree
+2. Balancing algorithm runs for every parent node.
+
+### Balancing
+- Balancing is done with _Node Rotation_.
+- Rotation occurs at the point of insertion and deletion and is repeated up the parents to the root node.
+- Rotation changes the physical structure of the tree within the constraints of a binary tree.
+
+### Node rotation algorithms
+- Right rotation
+- Left rotation
+- Right-Left rotation
+- Left-Right rotation
+
+#### Right-heavy tree
+```
+if right child is left-heavy
+   left-right rotation
+else
+  left rotation
+```
+
+#### Left-heavy tree
+```
+if left child is right-heavy
+  right-left rotation
+else
+  right rotation
+```
+
+### Right rotation
+```
+temp = node
+node = temp.left
+temp.left = node.right
+node.right = temp
+```
+
+### Left rotation
+```
+temp = node
+node = temp.right
+temp.right = node.left
+node.left = temp
+```
+
+### Right-left rotation
+```
+left-rotate the left child
+right-rotate the updated tree
+```
+
+### Left-right rotation
+```
+right-rotate the right child
+left rotate the updated tree
+```
 
 
 # Algorithms
