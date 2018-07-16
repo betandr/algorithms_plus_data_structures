@@ -25,6 +25,7 @@ implemented in Python.
 - [Quick Sort](algorithms/sorting.py#L86)
 - [Naïve String Searching](algorithms/string_search.py#L8)
 - [Boyer-Moore-Horspool String Searching](algorithms/string_search.py#L18)
+- [Dijkstra's shortest path](algorithms/dijkstra.py#L47)
 
 Running `python3 algorithms/sorting.py` executes the sorts with the same 1000
 item arrays and times the result. This doesn't take into account swaps or
