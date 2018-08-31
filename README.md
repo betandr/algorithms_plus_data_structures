@@ -3,7 +3,7 @@
 _"Algorithms + Data Structures = Programs"_ - Niklaus Wirth
 
 A collection of _VERY NAIVE AND NOT PRODUCTION_ algorithms and data structures
-implemented in Python.
+implemented in Python just to help me learn Python.
 
 ## Structures
 
