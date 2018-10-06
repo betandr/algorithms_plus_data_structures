@@ -1,5 +1,8 @@
 
 def bubble_sort(items):
+    """
+    Sort items with a bubble sort.
+    """
     working = True
     while working:
         working = False
@@ -16,6 +19,9 @@ def bubble_sort(items):
     return items
 
 def insertion_sort(items):
+    """
+    Sort items with an insertion sort.
+    """
     last = 0
     for index in range(1, len(items)):
         if items[index] < items[last]:
@@ -28,6 +34,9 @@ def insertion_sort(items):
     return items
 
 def selection_sort(items):
+    """
+    Sort items with a selection sort.
+    """
     for index, item in enumerate(items):
         current_smallest = index
         for search_index in range(index + 1, len(items)):
@@ -39,6 +48,9 @@ def selection_sort(items):
     return items
 
 def merge_sort(items):
+    """
+    Sort items with a merge sort.
+    """
     if len(items) < 2:
         return items
 
@@ -85,6 +97,7 @@ def _quicksort(array, lo, hi):
 
 def quicksort(array):
     """
+    Sort items with a bubble sort.
     Implemented using Lomuto partition scheme
     """
     return _quicksort(array, 0, len(array) - 1)

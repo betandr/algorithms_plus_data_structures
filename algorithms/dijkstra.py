@@ -1,5 +1,7 @@
 from decimal import Decimal
 
+INFINITY = Decimal('Infinity')
+
 class Node:
     def __init__(self, label):
         self.label = label
@@ -42,7 +44,6 @@ def min_dist(q, dist):
 
     return min_node
 
-INFINITY = Decimal('Infinity')
 
 def dijkstra(graph, source):
     q = set()
@@ -75,7 +76,9 @@ def dijkstra(graph, source):
 
 
 def to_array(prev, from_node):
-    """Creates an ordered list of labels as a route."""
+    """
+    Creates an ordered list of labels as a route.
+    """
     previous_node = prev[from_node]
     route = [from_node.label]
     while previous_node != INFINITY:

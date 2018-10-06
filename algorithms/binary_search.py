@@ -1,6 +1,9 @@
 
 
 def binary_search(a, t):
+    """
+    Search for t in a collection a
+    """
     l = 0
     r = len(a)
     while l <= r:

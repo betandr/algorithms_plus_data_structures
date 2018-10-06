@@ -6,10 +6,13 @@ class SearchMatch:
 
 
 class NaiveSearch:
-    def search(self, pattern, s):
-        for i, c in enumerate(s):
+    def search(self, pattern, to_search):
+        """
+        Search for pattern in string to_search using naive approach.
+        """
+        for i, c in enumerate(to_search):
             count = 0
-            while s[i + count] == pattern[count]:
+            while to_search[i + count] == pattern[count]:
                 count += 1
                 if len(pattern) == count:
                     return SearchMatch(i, count)
@@ -25,6 +28,9 @@ class BoyerMooreHorspoolSearch:
         return default_value, distances
 
     def search(self, pattern, to_search):
+        """
+        Search for pattern in to_search using Boyer-Moore-Horspool approach.
+        """
         matches = []
         default_value, bad_match_table = self._build_bad_match_table(pattern)
         current_start_index = 0
