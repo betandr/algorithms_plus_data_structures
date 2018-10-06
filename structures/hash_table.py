@@ -24,6 +24,7 @@ class AdditiveHash:
             val += ord(c)
         return val
 
+
 class FoldingHash:
     """
     Generate a hash by folding a moving window of 4 characters together and then
@@ -51,6 +52,7 @@ class FoldingHash:
             window = s[i:i+4]
 
         return val
+
 
 class AdditiveHashTable:
     def __init__(self):
